@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {Form} from './Form';
 import {List} from './List';
 import { getLanguages } from "./const/languages";
 import { withLoading } from './hoc/withloading';
+import { Modal } from './components/modal';
 
 const Header = styled.header`
   display: flex;
@@ -26,7 +27,6 @@ const HeaderLi = styled.li`
 `
 
 function App({ data }) {
-  console.warn('App.js');
   const [tab, setTab] = useState('list');
   const [langs, setLangs] = useState(data);
 
